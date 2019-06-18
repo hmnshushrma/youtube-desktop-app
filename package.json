@@ -1,0 +1,25 @@
+{
+  "name": "YouTubeMusic",
+  "version": "0.0.1",
+  "description": "Simple YouTube Desktop App for mac currently",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds --darwinDarkModeSupport=true",
+    "package-dmg": "electron-installer-dmg ./release-builds/YouTubeMusic-darwin-x64/YouTubeMusic.app/ youtube-music-app --out=release-builds --overwrite --icon=assets/icons/mac/icon.icns"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "music",
+    "youotube music",
+    "youtube",
+    "synced"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^5.0.2",
+    "electron-installer-dmg": "^3.0.0",
+    "electron-packager": "^13.1.1"
+  }
+}
